@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="5" />
+    <!-- <meta http-equiv="refresh" content="10" > -->
+    <title>Cloud education</title>
+    <style>
+      html,
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        margin: 0px;
+      }
+
+      .bg {
+        background-image: url("images/main.jpg");
+        height: 104%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.2rem;
+      }
+
+      table {
+        font-size: 2.2rem;
+        min-width: 100%;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: scroll;
+      }
+
+      td {
+        border: 1.5px solid #000000;
+        text-align: center;
+        padding: 8px;
+        /* font-size: 20px; */
+      }
+
+      th {
+        border: 1.5px solid #000000;
+        text-align: center;
+        padding: 8px;
+        background-color: #4caf50;
+        color: white;
+      }
+
+      p {
+        font-style: italic;
+        font-size: 28px;
+      }
+
+      @media only screen and (max-width: 700px) {
+        table,
+        h1 {
+          font-size: 4rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg">
+    <h1>AIBO8 smart Garbage monitoring system</h1>
+    <table>
+      <thead>
+        <th>BIN Number</th>
+        <th>BIN Status</th>
+      </thead>
+      <tbody id="t1"></tbody>
+    </table>
+  </body>
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCXBoNAFbX3JjRWg-1A79ajH8kYJBxCJ2s",
+      authDomain: "esp8266.firebaseapp.com",
+      databaseURL: "https://esp8266-42fe7-default-rtdb.firebaseio.com",
+      projectId: "esp8266",
+      storageBucket: "esp8266.appspot.com",
+      messagingSenderId: "1091702081490",
+    };
+    //   var config = {
+    //   apiKey: "AIzaSyCXBoNAFbX3JjRWg-1A79ajH8kYJBxCJ2s",
+    //   authDomain: "esp8266.firebaseapp.com",
+    //   databaseURL: "https://esp8266-42fe7-default-rtdb.firebaseio.com/",
+    //   projectId: "esp8266-42fe7",
+    //   storageBucket: "esp8266.appspot.com",
+    //   messagingSenderId: "1091702081490"
+    // };
+
+    firebase.initializeApp(config);
+  </script>
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-3.3.1.js"
+  ></script>
+  <script type="text/javascript" src="index.js"></script>
+</html>
